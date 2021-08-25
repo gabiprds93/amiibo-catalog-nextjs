@@ -32,11 +32,11 @@ The style preprocessor [Sass](https://sass-lang.com/) was also used.
 
 - The next step is to install the dependencies with the following command:
   
-   `npm install`
+  `npm install`
 
 - Finally, to get the project up you have to run the following command:
 
-  `npm start`
+  `npm run dev`
 
 You can test the web application in this [link](https://amiibos.vercel.app/) hosted on [Vercel](https://vercel.com/).
 
@@ -44,7 +44,7 @@ You can test the web application in this [link](https://amiibos.vercel.app/) hos
 
 ---
 
-## Getting Started
+## Getting Started with Create Next App
 
 First, run the development server:
 
