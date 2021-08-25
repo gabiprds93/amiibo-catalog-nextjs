@@ -1,0 +1,42 @@
+.Home
+  padding-top: $size-header-height
+
+  &__header
+    background: $color-white
+    height: $size-header-height
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    z-index: 1
+
+  &__main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-top: $size-header-height
+
+    &__info
+      display: flex
+      justify-content: center
+
+    &__filters
+      height: 70vh
+      left: 0
+      position: sticky
+      top: 8.8rem
+
+  &__dark-toggle
+    position: fixed
+    top: 10.4rem
+    right: 3.2rem
+
+@media (max-width: $mobile)
+  .Home
+    padding-top: $size-header-height-mobile
+
+    &__header
+      height: $size-header-height-mobile
+
+    &__dark-toggle
+      top: $size-header-height * 2

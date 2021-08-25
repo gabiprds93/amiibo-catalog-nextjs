@@ -1,0 +1,26 @@
+.CategoriesMenu
+  z-index: 100
+
+  &__wrapper
+    align-items: center
+    cursor: pointer
+    display: flex
+    margin-left: 1.6rem
+
+  &__text
+    color: $color-black
+    font-size: 1.6rem
+    padding-right: 1.6rem
+
+  &__icon
+    height: 2.7rem
+    width: 2.4rem
+
+    & img
+      height: 100%
+      width: 100%
+
+@media (max-width: $tablet)
+  .CategoriesMenu
+    &__text
+      display: none
