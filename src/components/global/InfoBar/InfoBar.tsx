@@ -25,7 +25,6 @@ const InfoBar: React.FC<Props> = (props) => {
    *
    */
   const drawerHandler = () => {
-    console.log("drwaer");
     setDrawerOpened((prev) => !prev);
   };
 

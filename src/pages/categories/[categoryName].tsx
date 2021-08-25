@@ -1,5 +1,6 @@
 import React from "react";
 
+// Components
 import Categories from "components/categories/Categories/Categories";
 
 interface Props {}

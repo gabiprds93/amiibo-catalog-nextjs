@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // Components
 import Navbar from "../../global/Navbar/Navbar";
@@ -37,23 +38,34 @@ const Categories: React.FC<Props> = (props) => {
   }, [amiibosByCategory, setCurrentAmiiboList]);
 
   return (
-    <div className="Categories">
-      <header className="Categories__header">
-        <Navbar />
-      </header>
+    <>
+      <Head>
+        <title>{`${categoryName} - Colecciona tus Amiibos`}</title>
+        <meta name="description" content={`Amiibos de ${categoryName}`} />
+        <link
+          rel="canonical"
+          href={`https://amiibos.vercel.app/categories/${categoryName}`}
+        />
+      </Head>
 
-      <main className="Categories__main">
-        <div className="Home__dark-toggle">
-          <DarkToggle />
-        </div>
+      <div className="Categories">
+        <header className="Categories__header">
+          <Navbar />
+        </header>
 
-        <InfoBar title={categoryName as string} />
+        <main className="Categories__main">
+          <div className="Home__dark-toggle">
+            <DarkToggle />
+          </div>
 
-        <AmiiboList list={currentAmiiboList} />
-      </main>
+          <InfoBar title={categoryName as string} />
 
-      <footer className="Categories__footer" />
-    </div>
+          <AmiiboList list={currentAmiiboList} />
+        </main>
+
+        <footer className="Categories__footer" />
+      </div>
+    </>
   );
 };
 
