@@ -12,7 +12,8 @@ const ResultsPage = (props: Props) => {
       <Head>
         <title>Resultados</title>
         <meta name="description" content="Página de resultados de Amiibos" />
-        <meta name="robots" content="noindex" />
+        <link rel="canonical" href="https://amiibos.vercel.app/results" />
+        <meta name="robots" content="noindex,follow" />
       </Head>
 
       <Results />

@@ -15,7 +15,8 @@ const FavoritesPage = (props: Props) => {
           name="description"
           content="Encuentra tu lista de Amiibos favoritos"
         />
-        <meta name="robots" content="noindex" />
+        <link rel="canonical" href="https://amiibos.vercel.app/favorites" />
+        <meta name="robots" content="noindex,follow" />
       </Head>
 
       <Favorites />

@@ -16,6 +16,7 @@ const HomePage = (props: Props) => {
           content="Amiibos, encuentra tu figura coleccionable"
         />
         <link rel="canonical" href="https://amiibos.vercel.app/" />
+        <meta name="robots" content="index,follow" />
       </Head>
 
       <Home />

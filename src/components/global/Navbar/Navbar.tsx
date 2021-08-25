@@ -13,13 +13,23 @@ import CONSTANTS from "../../../configs/constants";
 import logoDesktop from "../../../assets/images/logo-amiibo-desktop.png";
 import logoMobile from "../../../assets/images/logo-amiibo-mobile.png";
 import heartSolidSVG from "../../../assets/images/heart-solid.svg";
+import { useEffect, useState } from "react";
 
 const { BREAKPOINTS } = CONSTANTS;
 
 const Navbar: React.FC<Props> = (props) => {
+  const [isWindowTablet, setIsWindowTablet] = useState(false);
   const isTablet = useMediaQuery({
     query: `(min-width: ${BREAKPOINTS.tablet + 1}px)`,
   });
+
+  useEffect(() => {
+    if (isTablet) {
+      setIsWindowTablet(true);
+    } else {
+      setIsWindowTablet(false);
+    }
+  }, [isTablet]);
 
   return (
     <div className="Navbar">
@@ -27,7 +37,7 @@ const Navbar: React.FC<Props> = (props) => {
         <div className="Navbar__logo">
           <Link href="/">
             <picture className="Navbar__logo__icon">
-              {isTablet ? (
+              {isWindowTablet ? (
                 <Image
                   src={logoDesktop}
                   height={56}

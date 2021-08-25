@@ -46,6 +46,7 @@ const Categories: React.FC<Props> = (props) => {
           rel="canonical"
           href={`https://amiibos.vercel.app/categories/${categoryName}`}
         />
+        <meta name="robots" content="index,follow" />
       </Head>
 
       <div className="Categories">
